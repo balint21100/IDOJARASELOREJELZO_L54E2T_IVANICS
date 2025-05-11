@@ -51,10 +51,19 @@
     setBackgroundColor(Weathers[Weathers.length-1]);
     ShowLastWeather(Weathers[Weathers.length-1]);
  }
+ function ShowLastWeather(weather)
+ {
+    document.getElementById("icon").innerHTML = geticon(weather)
+    document.getElementById("forecast").innerHTML = `Időjárás: ${weather.forecast}`
+    document.getElementById("temp").innerHTML = `Hőmérséklet: ${weather.c} °C`
+    document.getElementById("windspeed").innerHTML = `Szélsebesség: ${weather.windspeed} km/h`
+ }
 
-  
   async function ForeCast(weatherTypes) 
   {
+    
+
+    
       const response = await fetch(url, 
       {
         method: "POST",
