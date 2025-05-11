@@ -11,9 +11,17 @@
     }
     ShowWeathers();
   }
- 
+ function GenerateRandomWeather()
+ {
+    weatherTypes = ["napos","borus","esős"]
+    return {
+      "forecast": weatherTypes[Math.floor(Math.random()*3)],
+      "c" : Math.floor(Math.random()*26)+5,
+      "windspeed" : Math.floor(Math.random()*37)+5,
+    }
+    
 
- 
+ }
  function ShowWeathers()
  {
     const daysOfWeek = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"];
@@ -44,5 +52,6 @@
     ShowLastWeather(Weathers[Weathers.length-1]);
  }
  
+
   
   
