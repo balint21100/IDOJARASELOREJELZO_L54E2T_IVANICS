@@ -51,7 +51,12 @@ namespace BACKEND.Controllers
             return "napos";
         }
 
-        
+        private string WorsenWeather(string current)
+        {
+            if (current == "napos") return "borult";
+            if (current == "borult") return "esős";
+            return "esős";
+        }
     }
 }
 
