@@ -1,0 +1,27 @@
+    #icon{
+        font-size: 60px;
+    }
+    tr{
+        transition: 3s;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s;
+      text-align: center;
+      color: #fff;
+    }
+    .larger{
+        font-size: 30px;
+    }
+    .larger2{
+        font-size: 36px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+
+
+
