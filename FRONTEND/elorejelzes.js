@@ -58,6 +58,23 @@
     document.getElementById("temp").innerHTML = `Hőmérséklet: ${weather.c} °C`
     document.getElementById("windspeed").innerHTML = `Szélsebesség: ${weather.windspeed} km/h`
  }
+function geticon(weather)
+{
+  switch (weather.forecast) {
+    case "esős":
+      return '<i class="bi bi-cloud-rain-fill"></i>';
+      break;
+    case "borus":
+      return '<i class="bi bi-clouds"></i>';
+      break;
+    case "napos":
+      return '<i class="bi bi-brightness-high"></i>';
+      break;
+    default:
+      return "";
+      break;
+  }
+}
 
   async function ForeCast(weatherTypes) 
   {
