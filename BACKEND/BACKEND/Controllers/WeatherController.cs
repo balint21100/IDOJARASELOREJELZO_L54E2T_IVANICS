@@ -44,6 +44,13 @@ namespace BACKEND.Controllers
             return Ok(forecast);
         }
 
+        private string ImproveWeather(string current)
+        {
+            if (current == "esős") return "borult";
+            if (current == "borult") return "napos";
+            return "napos";
+        }
+
         
     }
 }
