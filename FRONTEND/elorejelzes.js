@@ -75,7 +75,17 @@ function geticon(weather)
       break;
   }
 }
-
+  function setBackgroundColor(w) {
+    console.log(w.forecast);
+    
+    switch (w.forecast) {
+      case "napos": document.body.style.backgroundColor = "#FFD700"; break;
+      case "borus": document.body.style.backgroundColor = "#808080"; break;
+      case "esős": document.body.style.backgroundColor = "#1E90FF"; break;
+      default: document.body.style.backgroundColor = "#444";
+    }
+  }
+  
   async function ForeCast(weatherTypes) 
   {
     
