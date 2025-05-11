@@ -51,7 +51,33 @@
     setBackgroundColor(Weathers[Weathers.length-1]);
     ShowLastWeather(Weathers[Weathers.length-1]);
  }
- 
+
+  
+  async function ForeCast(weatherTypes) 
+  {
+      const response = await fetch(url, 
+      {
+        method: "POST",
+        headers: 
+        {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(Weathers)
+      });
+
+      if (response.status === 400) 
+      {
+
+        alert("Hibás bemenet");
+      } 
+      else if (response.status === 200) 
+      {
+        const res = await response.json();
+        Weathers.push(res);
+        ShowWeathers();
+      }
+    
+  }
 
   
   
